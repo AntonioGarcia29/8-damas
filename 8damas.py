@@ -8,13 +8,12 @@ class Ndamas:
         self.soluciones = []
         self.resuelve()
 
-#Coloca la primera dama indicada por el usuario e inicia el algoritmo
-def resuelve(self):
+    #Coloca la primera dama indicada por el usuario e inicia el algoritmo
+    def resuelve(self):
         tablero = [-1] * self.tamaño
         tablero[self.primeraD[0]]= self.primeraD[1]
         self.resuelveNDamas(tablero,0)
 
-# verificamos si hay algun conflicto al colocar una dama con las anteriores
     def esSeguro(self, tablero, fila, columna):
         for i in range(fila):
             #verifica que no se coloque en la misma columna o diagonal, esto lo hace viendo si la diferencia de columnas y filas es igual
