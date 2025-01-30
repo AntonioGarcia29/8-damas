@@ -56,7 +56,7 @@ class NdamasInterfaz:
         self.botonResolver = tk.Button(root, text="Resolver", command=self.resuelve)
         self.botonResolver.grid(row=3, columnspan=2)
 
-        self.canvas = tk.Canvas(root, width = 400, height =400)
+        self.canvas = tk.Canvas(root, width = 700, height =700)
         self.canvas.grid(row=4, columnspan=2)
 
         self.solutions = []
@@ -101,7 +101,7 @@ class NdamasInterfaz:
         #definimos el tamaño del tablero
         tamaño = len(tablero)
         #colocamos el tamaño que tendra cada recuadro, esto se divide entre el tamaño del tablero para que sea adaptable
-        cell_size = 400 // tamaño  
+        cell_size = 700 // tamaño  
 
         for i in range(tamaño):
             for j in range(tamaño):
@@ -109,8 +109,8 @@ class NdamasInterfaz:
                 self.canvas.create_rectangle(j * cell_size, i * cell_size, (j + 1) * cell_size, (i + 1) * cell_size, fill=color)
 
         for i in range(tamaño):
-            self.canvas.create_oval(tablero[i] * cell_size + 10, i * cell_size + 10,
-                                    (tablero[i] + 1) * cell_size - 10, (i + 1) * cell_size - 10,
+            self.canvas.create_oval(tablero[i] * cell_size + 40, i * cell_size + 40,
+                                    (tablero[i] + 1) * cell_size - 40, (i + 1) * cell_size - 40,
                                     fill="red")
 
     def mostrarSiguienteS(self):
