@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 
+
 class Ndamas:
     def __init__(self, tamaño, primeraD):
         self.tamaño = tamaño
